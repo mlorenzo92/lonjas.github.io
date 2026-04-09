@@ -459,18 +459,22 @@ h2 {
 }
 
 .gallery-photo-1::before {
+  background-image: url("imagenes/cuerda.jpg");
   background-position: center 78%;
 }
 
 .gallery-photo-2::before {
+  background-image: url("imagenes/baile.jpg");
   background-position: left center;
 }
 
 .gallery-photo-3::before {
+  background-image: url("imagenes/barrio sur.jpeg");
   background-position: center 24%;
 }
 
 .gallery-photo-4::before {
+  background-image: url("imagenes/fogon.png");
   background-position: right center;
 }
 
