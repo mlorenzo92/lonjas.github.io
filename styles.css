@@ -15,11 +15,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background:
@@ -335,22 +337,6 @@ main {
   margin-bottom: 1.75rem;
 }
 
-.section-heading-centered {
-  width: 100%;
-  justify-items: center;
-  text-align: center;
-}
-
-.section-heading-centered h2 {
-  max-width: 16ch;
-}
-
-.centered-title {
-  width: fit-content;
-  margin-inline: auto;
-  text-align: center;
-}
-
 h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(3rem, 6vw, 4.8rem);
@@ -630,6 +616,10 @@ h2 {
 
   .single-line-title {
     white-space: normal;
+    font-size: clamp(2.4rem, 9vw, 3.4rem);
+  }
+
+  .matched-title {
     font-size: clamp(2.4rem, 9vw, 3.4rem);
   }
 
