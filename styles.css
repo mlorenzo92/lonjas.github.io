@@ -345,10 +345,10 @@ main {
   max-width: 16ch;
 }
 
-.section-title-wide {
-  max-width: none;
-  white-space: nowrap;
-  font-size: clamp(2.3rem, 4vw, 4.2rem);
+.centered-title {
+  width: fit-content;
+  margin-inline: auto;
+  text-align: center;
 }
 
 h2 {
@@ -631,11 +631,6 @@ h2 {
   .single-line-title {
     white-space: normal;
     font-size: clamp(2.4rem, 9vw, 3.4rem);
-  }
-
-  .section-title-wide {
-    white-space: normal;
-    font-size: clamp(2.2rem, 8vw, 3.2rem);
   }
 
   .hero-card,
