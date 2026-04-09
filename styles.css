@@ -344,6 +344,12 @@ main {
   max-width: 16ch;
 }
 
+.section-title-wide {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+}
+
 h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(3rem, 6vw, 4.8rem);
@@ -624,6 +630,11 @@ h2 {
   .single-line-title {
     white-space: normal;
     font-size: clamp(2.4rem, 9vw, 3.4rem);
+  }
+
+  .section-title-wide {
+    white-space: normal;
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
   }
 
   .hero-card,
