@@ -336,6 +336,7 @@ main {
 }
 
 .section-heading-centered {
+  width: 100%;
   justify-items: center;
   text-align: center;
 }
