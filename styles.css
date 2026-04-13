@@ -478,6 +478,123 @@ h2 {
   background-position: right center;
 }
 
+.photo-portal {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.photo-frame {
+  position: relative;
+  min-height: 340px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(4, 24, 20, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.photo-frame-large {
+  grid-column: span 2;
+  min-height: 420px;
+}
+
+.photo-frame-wide {
+  grid-column: span 2;
+}
+
+.photo-portal-archive .photo-frame {
+  min-height: 280px;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-trigger {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: zoom-in;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-frame-copy {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  pointer-events: none;
+  padding: 1.2rem;
+  background:
+    linear-gradient(180deg, rgba(4, 24, 20, 0) 0%, rgba(4, 24, 20, 0.84) 36%, rgba(4, 24, 20, 0.96) 100%);
+}
+
+.photo-frame-copy span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.photo-frame-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: rgba(3, 18, 15, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  max-width: min(92vw, 1200px);
+  max-height: 88vh;
+}
+
+.lightbox-image {
+  width: auto;
+  max-width: 100%;
+  max-height: 88vh;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  border: 1px solid rgba(194, 248, 228, 0.22);
+  background: rgba(6, 36, 31, 0.9);
+  color: var(--text);
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: 1.2fr 0.9fr;
@@ -528,9 +645,16 @@ h2 {
   .subpage-grid,
   .subpage-columns,
   .gallery-grid,
+  .photo-portal,
   .contact-layout,
   .hero-stats {
     grid-template-columns: 1fr;
+  }
+
+  .photo-frame-large,
+  .photo-frame-wide {
+    grid-column: span 1;
+    min-height: 340px;
   }
 
   .schedule-item {
@@ -608,6 +732,15 @@ h2 {
   .nav-links a {
     display: inline-block;
     font-size: 1.8rem;
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox-close {
+    top: 0.85rem;
+    right: 0.85rem;
   }
 
   h1 {
