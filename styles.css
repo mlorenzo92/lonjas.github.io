@@ -76,6 +76,15 @@ body::after {
   padding-bottom: 0;
 }
 
+.hero-subpage::after {
+  background: linear-gradient(180deg, rgba(0, 54, 15, 0.2) 0%, rgba(0, 148, 33, 0.12) 42%, rgba(88, 21, 21, 0.24) 100%);
+  box-shadow: inset 0 -110px 120px rgba(2, 13, 11, 0.58);
+}
+
+.hero-subpage::before {
+  opacity: 0.35;
+}
+
 .hero::after {
   content: "";
   position: absolute;
@@ -829,16 +838,16 @@ h2 {
 @media (max-width: 720px) {
   body {
     background:
-      linear-gradient(180deg, rgba(10, 42, 8, 0.38), rgba(52, 17, 17, 0.66)),
-      url("portada.png") 64% top / cover no-repeat scroll;
+      linear-gradient(180deg, rgba(10, 42, 8, 0.24), rgba(52, 17, 17, 0.5)),
+      url("portada.png") center 16% / cover no-repeat scroll;
   }
 
   body::before {
-    opacity: 0.34;
+    opacity: 0.22;
   }
 
   body::after {
-    opacity: 0.08;
+    opacity: 0.05;
   }
 
   .page-shell {
@@ -848,6 +857,26 @@ h2 {
   .hero {
     min-height: auto;
     padding-top: 0.5rem;
+  }
+
+  .hero::after {
+    inset: 4.8rem 0 2rem;
+    background: linear-gradient(180deg, rgba(0, 54, 15, 0.12) 0%, rgba(0, 148, 33, 0.08) 42%, rgba(88, 21, 21, 0.14) 100%);
+    box-shadow: inset 0 -70px 90px rgba(2, 13, 11, 0.34);
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero-subpage::after {
+    inset: 4.8rem 0 2rem;
+    background: linear-gradient(180deg, rgba(0, 54, 15, 0.12) 0%, rgba(0, 148, 33, 0.08) 42%, rgba(88, 21, 21, 0.14) 100%);
+    box-shadow: inset 0 -70px 90px rgba(2, 13, 11, 0.34);
+  }
+
+  .hero-subpage::before {
+    display: none;
   }
 
   .topbar,
