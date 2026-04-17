@@ -1,185 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estilo Detailing | Registro interno</title>
-  <link rel="icon" type="image/jpeg" href="./image.jpg">
-  <link rel="apple-touch-icon" href="./image.jpg">
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-  <main class="shell">
-    <section id="loginView" class="panel auth-panel">
-      <div class="brand-block">
-        <div class="brand-image" aria-hidden="true"></div>
-        <p class="eyebrow">Panel interno</p>
-        <h1>Estilo Detailing</h1>
-        <p class="intro">
-          Inicia sesion para registrar los lavados y ver el resumen diario y mensual.
-        </p>
-      </div>
-
-      <form id="loginForm" class="auth-form">
-        <label>
-          Usuario
-          <input id="username" name="username" type="text" autocomplete="username" required>
-        </label>
-
-        <label>
-          Contrasena
-          <input id="password" name="password" type="password" autocomplete="current-password" required>
-        </label>
-
-        <button type="submit" class="primary-btn">Ingresar</button>
-        <p id="loginError" class="error-message" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <section id="appView" class="app hidden">
-      <header class="topbar panel">
-        <div class="topbar-brand">
-          <div class="brand-image brand-image-small" aria-hidden="true"></div>
-          <div>
-          <p class="eyebrow">Registro de servicios</p>
-          <h2>Control de lavados</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lonjas de Cuareim, comparsa del Barrio Sur con raíz, tambor y memoria."
+    />
+    <title>Lonjas de Cuareim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="#inicio">Lonjas de Cuareim</a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-nav"
+            aria-label="Abrir menú"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            <div class="nav-links-inner" id="main-nav">
+              <a href="#inicio" class="active">Inicio</a>
+              <a href="sobre-nosotros.html">Sobre Nosotros</a>
+              <a href="#historia">Historia</a>
+              <a href="galeria.html">Galería</a>
+              <a href="#contacto">Contacto</a>
+            </div>
           </div>
-        </div>
+        </nav>
 
-        <div class="topbar-actions">
-          <span class="session-badge">Usuario: gonzalito</span>
-          <button id="logoutBtn" type="button" class="secondary-btn">Cerrar sesion</button>
+        <section class="hero-content" id="inicio">
+          <p class="eyebrow">Barrio Sur - Montevideo</p>
+          <h1>Lonjas de Cuareim</h1>
+          <p class="hero-tagline">Raíz, tambor y memoria del Barrio Sur</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#historia">Conocé Más</a>
+          </div>
+        </section>
+
+        <div class="hero-card reveal">
+          <span class="hero-card-label">Desde la calle Cuareim</span>
+          <div class="hero-stats">
+            <article>
+              <strong>Raíz viva</strong>
+              <span>Hija del Barrio Sur, donde el tambor no se aprende: se hereda.</span>
+            </article>
+            <article>
+              <strong>Escena popular</strong>
+              <span>Una comparsa que no desfila, suena. Cada paso lleva historia, cada toque tiene nombre.</span>
+            </article>
+            <article>
+              <strong>Comunidad</strong>
+              <span>Familia, barrio y generaciones que mantienen encendida la llama del candombe.</span>
+            </article>
+          </div>
         </div>
       </header>
 
-      <section class="content-grid">
-        <article class="panel">
+      <main>
+        <section class="section story reveal" id="historia">
           <div class="section-heading">
-            <div>
-              <p class="eyebrow">Nuevo registro</p>
-              <h3>Cargar lavado</h3>
+            <p class="eyebrow">Nuestra historia</p>
+            <h2 class="single-line-title">Una comparsa que late con identidad propia.</h2>
+          </div>
+          <div class="story-grid">
+            <article class="story-panel highlight">
+              <p>
+                Lonjas de Cuareim nace del encuentro entre vecinas, vecinos y
+                tamborileros del Barrio Sur, donde el candombe es memoria viva
+                además de expresión artística.
+              </p>
+            </article>
+            <article class="story-panel">
+              <h3>Ensayo abierto</h3>
+              <p>
+                Cada ensayo es una invitación a compartir el pulso del barrio,
+                aprender del otro y sostener una tradición que se renueva.
+              </p>
+            </article>
+            <article class="story-panel">
+              <h3>Desfile con presencia</h3>
+              <p>
+                El vestuario, el baile y la cuerda se piensan como un conjunto
+                escénico con fuerza propia y raíz afro-uruguaya.
+              </p>
+            </article>
+            <article class="story-panel">
+              <h3>Puertas abiertas</h3>
+              <p>
+                El proyecto crece con nuevos talentos, colaboraciones y
+                actividades culturales para seguir sumando voces.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section schedule reveal" id="agenda">
+          <div class="section-heading">
+            <p class="eyebrow">Agenda</p>
+            <h2 class="single-line-title">Fechas para hacer sonar la llamada.</h2>
+          </div>
+          <div class="schedule-list">
+            <article class="schedule-item">
+              <div>
+                <p class="schedule-date">Jueves 16 de Abril</p>
+                <h3>Taller de Candombe</h3>
+              </div>
+              <p>19:00 hs</p>
+            </article>
+            <article class="schedule-item">
+              <div>
+                <p class="schedule-date">Jueves 23 de Abril</p>
+                <h3>Taller de Candombe</h3>
+              </div>
+              <p>19:00 hs</p>
+            </article>
+            <article class="schedule-item">
+              <div>
+                <p class="schedule-date">Sábado 25 de Abril</p>
+                <h3>Nuestro primer ensayo rumbo a las llamadas</h3>
+              </div>
+              <p>18:00 hs</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section gallery reveal" id="galeria">
+          <div class="section-heading">
+            <p class="eyebrow">Galería</p>
+            <h2 class="single-line-title">Imágenes para sentir el pulso de la comparsa.</h2>
+          </div>
+          <div class="gallery-grid">
+            <article class="gallery-card gallery-card-large gallery-photo gallery-photo-1">
+              <span>Cuerda</span>
+              <p>La llamada empieza en el cuero, sigue en la calle y se expande en todo el barrio.</p>
+            </article>
+            <article class="gallery-card gallery-photo gallery-photo-2">
+              <span>Baile</span>
+              <p>Movimiento, presencia y tradición en cada salida.</p>
+            </article>
+            <article class="gallery-card gallery-photo gallery-photo-3">
+              <span>Barrio Sur</span>
+              <p>Memoria viva, encuentro y pertenencia en cada esquina.</p>
+            </article>
+            <article class="gallery-card gallery-photo gallery-photo-4">
+              <span>Fogón y lonjas</span>
+              <p>El calor del candombe sigue encendiendo la noche.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact reveal" id="contacto">
+          <div class="section-heading">
+            <p class="eyebrow">Contacto</p>
+            <h2 class="single-line-title">La rueda siempre tiene lugar para alguien más.</h2>
+          </div>
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <p>
+                Si querés que la comparsa suene en tu evento, acercarte a un
+                ensayo o impulsar una actividad cultural, estás invitado a
+                ponerte en contacto.
+              </p>
+            </div>
+            <div class="contact-box">
+              <a href="mailto:lonjasdecuareim@gmail.com">lonjasdecuareim@gmail.com</a>
+              <a href="https://www.instagram.com/lonjasdecuareim/" target="_blank" rel="noreferrer">
+                Instagram / @lonjasdecuareim
+              </a>
+              <a href="https://wa.me/59897049992" target="_blank" rel="noreferrer">
+                WhatsApp / +598 97 049 992
+              </a>
             </div>
           </div>
+        </section>
+      </main>
 
-          <form id="washForm" class="wash-form">
-            <label>
-              Fecha
-              <input id="serviceDate" name="serviceDate" type="date" required>
-            </label>
+      <footer class="site-footer">
+        <p>Designed by Ombu</p>
+      </footer>
+    </div>
 
-            <label>
-              Vehiculo
-              <select id="vehicleType" name="vehicleType" required>
-                <option value="Auto">Auto</option>
-                <option value="SUV">SUV</option>
-                <option value="Camioneta">Camioneta</option>
-              </select>
-            </label>
-
-            <label>
-              Marca del vehiculo
-              <input id="vehicleBrand" name="vehicleBrand" type="text" placeholder="Ej: Chevrolet" required>
-            </label>
-
-            <label>
-              Tipo de lavado
-              <select id="washType" name="washType" required>
-                <option value="Simple">Simple</option>
-                <option value="Comun">Comun</option>
-                <option value="Premium">Premium</option>
-              </select>
-            </label>
-
-            <label>
-              Costo del servicio
-              <input id="serviceCost" name="serviceCost" type="number" min="0" step="0.01" placeholder="0.00" required>
-            </label>
-
-            <button type="submit" class="primary-btn">Guardar lavado</button>
-            <p id="formMessage" class="success-message" aria-live="polite"></p>
-          </form>
-        </article>
-
-        <article class="panel">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Filtros</p>
-              <h3>Consultar resultados</h3>
-            </div>
-          </div>
-
-          <div class="filter-grid">
-            <label>
-              Ver dia
-              <input id="dailyFilter" type="date">
-            </label>
-
-            <label>
-              Ver mes
-              <input id="monthlyFilter" type="month">
-            </label>
-          </div>
-        </article>
-      </section>
-
-      <section class="dashboard-grid">
-        <article class="panel">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Resumen por dia</p>
-              <h3 id="dailyTitle">Hoy</h3>
-            </div>
-            <button id="exportDailyBtn" type="button" class="secondary-btn">Exportar dia</button>
-          </div>
-
-          <div id="dailyStats" class="stats-grid"></div>
-          <div id="dailyBreakdown" class="breakdown-list"></div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Fecha</th>
-                  <th>Vehiculo</th>
-                  <th>Marca</th>
-                  <th>Lavado</th>
-                  <th>Costo</th>
-                </tr>
-              </thead>
-              <tbody id="dailyTableBody"></tbody>
-            </table>
-          </div>
-        </article>
-
-        <article class="panel">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Resumen por mes</p>
-              <h3 id="monthlyTitle">Mes actual</h3>
-            </div>
-            <button id="exportMonthlyBtn" type="button" class="secondary-btn">Exportar mes</button>
-          </div>
-
-          <div id="monthlyStats" class="stats-grid"></div>
-          <div id="monthlyBreakdown" class="breakdown-list"></div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Fecha</th>
-                  <th>Vehiculo</th>
-                  <th>Marca</th>
-                  <th>Lavado</th>
-                  <th>Costo</th>
-                </tr>
-              </thead>
-              <tbody id="monthlyTableBody"></tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-    </section>
-  </main>
-
-  <script src="./app.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
