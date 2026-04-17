@@ -72,3 +72,38 @@ if (lightbox && lightboxImage && lightboxClose && photoTriggers.length) {
     }
   });
 }
+
+const carousel = document.querySelector(".featured-carousel");
+
+if (carousel) {
+  const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+  const thumbs = Array.from(carousel.querySelectorAll(".carousel-thumb"));
+  const arrows = Array.from(carousel.querySelectorAll(".carousel-arrow"));
+  let currentSlide = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+  if (currentSlide < 0) currentSlide = 0;
+
+  const renderCarousel = (index) => {
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === index);
+    });
+
+    thumbs.forEach((thumb, thumbIndex) => {
+      thumb.classList.toggle("is-active", thumbIndex === index);
+    });
+
+    currentSlide = index;
+  };
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => renderCarousel(index));
+  });
+
+  arrows.forEach((arrow) => {
+    arrow.addEventListener("click", () => {
+      const direction = arrow.dataset.direction === "next" ? 1 : -1;
+      const nextIndex = (currentSlide + direction + slides.length) % slides.length;
+      renderCarousel(nextIndex);
+    });
+  });
+}
